@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<umbPackage>
+	<info>
+		<package>
+			<name>Stellar</name>
+			<version>0.0.0</version>
+			<license url="http://www.opensource.org/licenses/mit-license.php">MIT license</license>
+			<url>http://our.umbraco.org/projects/</url>
+			<requirements>
+				<major>0</major>
+				<minor>0</minor>
+				<patch>0</patch>
+			</requirements>
+		</package>
+		<author>
+			<name>Imulus</name>
+			<website>http://www.imulus.com/</website>
+		</author>
+		<readme>
+			<![CDATA[]]>
+		</readme>
+	</info>
+	<DocumentTypes />
+	<Templates />
+	<Stylesheets />
+	<Macros />
+	<DictionaryItems />
+	<Languages />
+	<DataTypes />
+    <Actions>
+      <Action runat="install"
+          undo="false"
+          alias="ExecuteSql">
+           <![CDATA[CREATE TABLE [StellarRatingEntries]([Id] [int] IDENTITY(1,1) NOT NULL,[NodeId] [int] NULL, [MemberId] [int] NULL, Value [decimal](10,2) NOT NULL, [Created] [datetime] NOT NULL, [Text] [nvarchar](1000) NULL,[IpAddress] [nvarchar](20))]]>
+      </Action>
+    </Actions>
+	<control />
+	<files />
+</umbPackage>
