@@ -56,7 +56,7 @@
 	<!-- PREPARE FILES -->
 	<Target Name="PrepairFiles" DependsOnTargets="Compile">
 		<ItemGroup>
-			<BinFiles Include="$(ProjectDir)\Bin\Release\*.dll" />
+			<BinFiles Include="$(ProjectDir)\Bin\Release\Stellar.Core.dll" />
 			<PackageFile Include="$(PackageDir)\package.xml" />
 		</ItemGroup>
 		<Copy SourceFiles="@(BinFiles)" DestinationFolder="$(BuildDir)\bin" />
